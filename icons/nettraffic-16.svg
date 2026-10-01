@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <!-- Variante 16px: menos elementos, trazos gruesos -->
+  <rect x="1" y="2" width="14" height="11" rx="2" fill="#1e293b" stroke="#94a3b8" stroke-width="1.4"/>
+  <rect x="3" y="12" width="10" height="2" rx="1" fill="#64748b"/>
+  <rect x="3"  y="9" width="2.6" height="2.5" fill="#4ade80"/>
+  <rect x="6.6" y="7" width="2.6" height="4.5" fill="#4ade80"/>
+  <rect x="10.2" y="5" width="2.6" height="6.5" fill="#4ade80"/>
+  <polyline points="4,8 8,4 12,6.5" fill="none" stroke="#f87171"
+           stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,4 @@
+usr/share/nettraffic/nettraffic/*
+usr/share/applications/nettraffic.desktop
+usr/bin/nettraffic
+usr/share/man/man1/nettraffic.1

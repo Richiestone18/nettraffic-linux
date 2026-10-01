@@ -1,0 +1,5 @@
+#!/bin/sh
+set -e
+# instalación: asegurar directorio de config del usuario (lo crea la app sola,
+# pero el .desktop del menú no debe fallar si no existe)
+exit 0

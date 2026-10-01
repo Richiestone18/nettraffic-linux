@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=NetTraffic
+GenericName=Monitor de tráfico de red
+Comment=Gráfica flotante de velocidad de descarga/subida con icono en bandeja
+Exec=/usr/bin/nettraffic
+Icon=nettraffic
+Terminal=false
+Categories=Network;Monitor;
+Keywords=network;traffic;bandwidth;monitor;speed;
+StartupNotify=false
+X-MATE-Autostart-enabled=false

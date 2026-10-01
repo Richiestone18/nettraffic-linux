@@ -1,0 +1,13 @@
+Package: nettraffic
+Version: 1.2.1-1
+Section: net
+Priority: optional
+Architecture: all
+Depends: python3, python3-gi, python3-cairo, gir1.2-gtk-3.0, gir1.2-ayatanaappindicator3-0.1, gir1.2-pango-1.0, x11-utils
+Maintainer: Richiestone Computer <richiestone18@gmail.com>
+Installed-Size: 100
+Description: Monitor de tráfico de red con gráfica flotante (NetTraffic para Linux)
+ Reimplementación libre inspirada en NetTraffic (venea.net): gráfica en
+ tiempo real de descarga/subida en ventana flotante, icono en bandeja con
+ indicador de actividad y cuota, estadísticas mensuales y contador de cuota
+ con periodos día/semana/mes. Idiomas: español e inglés.

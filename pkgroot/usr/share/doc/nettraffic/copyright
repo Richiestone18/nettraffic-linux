@@ -1,0 +1,14 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: nettraffic
+
+Files: *
+Copyright: 2026 Richiestone Computer
+License: MIT
+ Permission is hereby granted, free of charge, to any person obtaining a copy
+ of this software and associated documentation files (the "Software"), to deal
+ in the Software without restriction.
+ .
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.
+ .
+ Reimplementación desde cero inspirada en el comportamiento observable de
+ NetTraffic (venea.net). No contiene código del original.

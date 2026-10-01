@@ -1,0 +1,6 @@
+#!/bin/sh
+# El paquete vive como paquete Python en /usr/share/nettraffic, así que el
+# directorio PADRE (/usr/share) es el que debe ir en PYTHONPATH para que
+# `import nettraffic` lo encuentre.
+export PYTHONPATH=/usr/share${PYTHONPATH:+:$PYTHONPATH}
+exec /usr/bin/python3 -c "from nettraffic.app import main; main()" "$@"

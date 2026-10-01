@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <!-- Icono NetTraffic Linux: monitor con gráfica de tráfico -->
+  <defs>
+    <linearGradient id="marco" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3b4a5c"/>
+      <stop offset="1" stop-color="#1e293b"/>
+    </linearGradient>
+    <linearGradient id="pantalla" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0f172a"/>
+      <stop offset="1" stop-color="#1a2740"/>
+    </linearGradient>
+    <linearGradient id="verde" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#16a34a"/>
+      <stop offset="1" stop-color="#4ade80"/>
+    </linearGradient>
+    <linearGradient id="rojo" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#dc2626"/>
+      <stop offset="1" stop-color="#f87171"/>
+    </linearGradient>
+  </defs>
+
+  <!-- marco del monitor -->
+  <rect x="10" y="14" width="108" height="78" rx="10" fill="url(#marco)"
+        stroke="#94a3b8" stroke-width="3"/>
+  <!-- pantalla -->
+  <rect x="18" y="22" width="92" height="62" rx="5" fill="url(#pantalla)"/>
+
+  <!-- gráfica de barras DENTRO de la pantalla -->
+  <!-- descarga: barras verdes (creciendo) -->
+  <g>
+    <rect x="26"  y="66" width="9" height="12" rx="2" fill="url(#verde)"/>
+    <rect x="39"  y="58" width="9" height="20" rx="2" fill="url(#verde)"/>
+    <rect x="52"  y="62" width="9" height="16" rx="2" fill="url(#verde)"/>
+    <rect x="65"  y="46" width="9" height="32" rx="2" fill="url(#verde)"/>
+    <rect x="78"  y="34" width="9" height="44" rx="2" fill="url(#verde)"/>
+    <rect x="91"  y="52" width="9" height="26" rx="2" fill="url(#verde)"/>
+  </g>
+  <!-- subida: línea roja sobre las barras -->
+  <polyline points="30,64 43,55 56,60 69,42 82,30 95,49"
+            fill="none" stroke="url(#rojo)" stroke-width="4"
+            stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- peana del monitor -->
+  <rect x="52" y="94" width="24" height="10" rx="3" fill="#94a3b8"/>
+  <rect x="34" y="104" width="60" height="8" rx="4" fill="#64748b"/>
+</svg>

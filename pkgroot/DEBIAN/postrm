@@ -1,0 +1,7 @@
+#!/bin/sh
+set -e
+if [ "$1" = "remove" ]; then
+    # limpiar autostart del usuario si existe (no tocamos settings)
+    rm -f "$HOME/.config/autostart/nettraffic.desktop" 2>/dev/null || true
+fi
+exit 0

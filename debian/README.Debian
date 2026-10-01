@@ -1,0 +1,5 @@
+README.Debian: no requiere configuración. Los ajustes se guardan en
+~/.config/nettraffic/settings.json al salir (o cada 5 minutos).
+Iniciar con el sistema: menú de la bandeja está desactivado por defecto;
+usar Ajustes → General → "Iniciar con el sistema" o el .desktop en
+/usr/share/applications.

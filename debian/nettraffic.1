@@ -1,0 +1,23 @@
+.TH NETTRAFFIC 1 "24 September 2026" "1.0.0" "NetTraffic Manual"
+.SH NAME
+nettraffic \- monitor de tráfico de red con gráfica flotante y bandeja
+.SH SYNOPSIS
+.B nettraffic
+.SH DESCRIPTION
+Reimplementación libre inspirada en NetTraffic (venea.net). Muestra una
+gráfica flotante con la velocidad de descarga/subida en tiempo real leída
+de /proc/net/dev, y un icono en la bandeja del sistema con indicador de
+actividad y de cuota.
+.PP
+Clic derecho en la gráfica o en el icono: menú (Mostrar, Siempre encima,
+Clic a través, Ocultar bajo puntero, Ajustes, Estadísticas, Acerca de, Salir).
+Arrastre con clic: mover ventana. Arrastre de bordes/esquinas: redimensionar.
+.SH FILES
+.TP
+.I ~/.config/nettraffic/settings.json
+Ajustes persistentes.
+.TP
+.I ~/.config/nettraffic/stats/
+Estadísticas mensuales (JSON).
+.SH OPTIONS
+No acepta opciones; toda la configuración es por interfaz gráfica.

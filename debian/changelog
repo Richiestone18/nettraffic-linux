@@ -1,0 +1,95 @@
+nettraffic (1.2.1-1) unstable; urgency=medium
+
+  * Icono de aplicación nuevo (SVG + PNG hicolor 16-128 px): monitor con
+    pantalla oscura, barras verdes de descarga y línea roja de subida.
+  * Icono de bandeja rediseñado a 32 px (como los demás del panel): mismo
+    concepto del original, con degradado en el marco, estados de actividad
+    (colores vivos/apagados) y barras de cuota arriba/abajo.
+  * Instalados en /usr/share/icons/hicolor para que el menú y el lanzador
+    los usen en todos los tamaños.
+
+ -- Richiestone <richiestone@localhost>  Tue, 29 Sep 2026 18:30:00 -0600
+
+nettraffic (1.2.0-1) unstable; urgency=medium
+
+  * Estadísticas rediseñada al estilo del original de Windows:
+    - General: bloques Estado actual / Promedio / Pronóstico con filas por
+      periodo (Desde el inicio, Año, Mes, Día, Hora), Enviado, Tiempo en
+      formato d:hh:mm:ss y Cursor (distancia recorrida del puntero en km,
+      con velocidad en mm/s y proyección al final del día).
+    - Los promedios usan los segundos MEDIDOS de cada periodo (day_secs/
+      hour_secs reales), no la sesión; los acumulados (Desde el inicio/Año)
+      ya no se extrapolan, solo lo que está en curso.
+    - Cuota: barra de uso con porcentaje y Restante + filas Usado/
+      Transferencia/Ajuste/Límite/Tiempo restante/Inicio/Fin/Duración/Factor.
+      El ajuste manual queda separado de la transferencia medida (como el
+      original: "Current value of counter can be adjusted").
+    - Gráficos/tablas: la gráfica gana modo Tráfico (barras apiladas) o
+      Tiempo activo (uptime por día), fechas en el eje X y rango con unidad
+      de tiempo; la tabla tiene fila de Suma con totales.
+    - Refresco periódico (1 s) de la pestaña General: números vivos.
+  * fmt_amount: corregido el caso >=1 TB (perdía el valor numérico).
+  * Sampler: get_period_totals() con segundos medidos por hora/día/mes/año.
+
+ -- Richiestone <richiestone@localhost>  Tue, 29 Sep 2026 17:20:00 -0600
+
+nettraffic (1.1.2-1) unstable; urgency=medium
+
+  * Con marco activado ya se puede ARRASTRAR la ventana: el lazo de ajuste
+    del marco seguía disparando y devolvía la ventana a su posición, como si
+    no obedeciera al mouse. Ahora: en cuanto el marco existe el ajuste termina,
+    y nunca actúa mientras hay un arrastre en curso.
+  * (nota del entorno: si la gráfica queda sobre cairo-dock, la franja del dock
+   se lleva los clics de esa zona; arrastrar desde la parte alta de la ventana
+   siempre responde.)
+
+ -- Richiestone <richiestone@localhost>  Tue, 29 Sep 2026 15:30:00 -0600
+
+nettraffic (1.1.1-1) unstable; urgency=medium
+
+  * La gráfica ya NUNCA aparece en la barra de tareas, con marco o sin marco,
+    como el original de Windows (SKIP_TASKBAR siempre activo).
+  * Con marco activado se puede arrastrar la ventana desde el centro con el
+    mouse (antes solo se podía mover desde la barra del WM); los bordes
+    redimensionan igual en ambos modos.
+
+ -- Richiestone <richiestone@localhost>  Tue, 29 Sep 2026 15:00:00 -0600
+
+nettraffic (1.1.0-1) unstable; urgency=medium
+
+  * Estadísticas: Promedio con unidad de velocidad (/s), Pronóstico corregido
+    (antes daba valores menores al actual), bloque de Cuota visible con
+    Mínimo/Máximo del periodo y ajuste del contador. Las unidades Mes y Año
+    ahora agregan de verdad (antes devolvían lo mismo que Día).
+  * La gráfica de Estadísticas no se dibujaba (error de tipo en el cálculo del
+    máximo): corregido, con etiquetas de eje Y y margen calculado.
+  * Clic a través ARREGLADO: se cargaba la biblioteca equivocada (XShape vive en
+    libXext, no en libX11), así que la opción nunca hacía nada. Además hay que
+    recortar también las ventanas hijas de GDK y re-aplicarlo tras el repintado.
+  * Ocultar bajo el puntero: deja pasar los clics mientras la ventana está
+    invisible y respeta el nivel de transparencia configurado.
+  * Cuota: el contador lleva base por interfaz (cambiar de «todas» a
+    «seleccionada» ya no mezcla cifras), ámbito configurable, y se reinicia
+    correctamente al empezar un periodo nuevo.
+  * Ventana con marco: se empuja hacia arriba para que la barra del WM nunca
+    quede fuera de pantalla (al activarla sobre una ventana ya mapeada el marco
+    se detecta con reintentos).
+  * Arranque oculto (solo bandeja) y menú «Ventana» para alternar el marco.
+  * Ajustes reescrito con navegación lateral, aplicación en vivo, edición de
+    colores, fuentes de datos e «iniciar con el sistema» de verdad; el scroll
+    con la rueda ya funciona (las páginas no declaraban altura mínima).
+  * Gráfica: escala calculada tras la línea base (las etiquetas ya no se
+    encabalgan), auto-escala de fuente real, velocímetro reubicado.
+
+ -- Richiestone <richiestone@localhost>  Tue, 29 Sep 2026 14:00:00 -0600
+
+nettraffic (1.0.0-1) unstable; urgency=medium
+
+  * Initial release: floating network traffic chart + tray icon for MATE/Linux
+  * Real-time rates from /proc/net/dev (all/selected interfaces, loopback exclusion)
+  * Chart: area/column/line, rectangle/speedometer, auto/manual Y scale, themes
+  * Border/corner mouse resize, live transparency slider, centered title bar
+  * Quota counter (day/week/month periods), monthly statistics + CSV export
+  * Ayatana tray icon with activity states and quota bars (es/en)
+
+ -- Hermes Agent <hermes@localhost>  Thu, 24 Sep 2026 17:00:00 -0600
