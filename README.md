@@ -40,7 +40,7 @@ decompilación).
 
 ## Instalación
 
-Paquete Debian: `nettraffic_1.2.1-1_all.deb` ( Releases de este repo o en este directorio)
+Descarga el `.deb` desde [Releases](https://github.com/Richiestone18/nettraffic-linux/releases) (versión actual: [v1.2.1](https://github.com/Richiestone18/nettraffic-linux/releases/tag/v1.2.1), botón *Assets*):
 
     sudo apt install ./nettraffic_1.2.1-1_all.deb   # resuelve dependencias
     nettraffic &
